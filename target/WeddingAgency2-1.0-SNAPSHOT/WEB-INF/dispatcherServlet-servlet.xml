@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:component-scan base-package="WeddingAgency.Controllers"></context:component-scan>
+
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/Views/"></property>
+        <property name="suffix" value=".jsp"></property>
+    </bean>
+
+    <bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+        <property name="url" value="jdbc:mysql://localhost:3306/weddingagency?useSSL=false&amp;useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC"></property>
+        <property name="username" value="root"></property>
+        <property name="password" value="q1w2e3r4t5y6"></property>
+    </bean>
+
+    <bean id="jt" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="ds"></property>
+    </bean>
+
+    <bean id="UserDao" class="WeddingAgency.DAO.UserDAO">
+        <property name="template" ref="jt"></property>
+    </bean>
+
+    <bean id="CategoryDao" class="WeddingAgency.DAO.CategoryDAO">
+        <property name="template" ref="jt"></property>
+    </bean>
+
+    <bean id="GuestsDao" class="WeddingAgency.DAO.GuestsDAO">
+        <property name="template" ref="jt"></property>
+    </bean>
+
+    <bean id="CommentRatingDao" class="WeddingAgency.DAO.CommentRatingDAO">
+        <property name="template" ref="jt"></property>
+    </bean>
+
+    <bean id="multipartResolver"
+          class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+    <!-- p:defaultEncoding="utf-8"-->
+   <!-- one of the properties available; the maximum file size in bytes -->
+        <!-- <property name="maxUploadSize" value="40000000" /> -->
+    </bean>
+</beans>
