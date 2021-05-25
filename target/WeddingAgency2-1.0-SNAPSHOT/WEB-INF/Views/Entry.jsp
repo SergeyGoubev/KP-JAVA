@@ -38,33 +38,33 @@
                     </li>
                     <li class="nav-item"><a class="nav-link">Люди<i class="fa fa-angle-down"></i></a>
                         <ul class="submenu">
-                            <li class="nav-item"><a class="nav-link" href="weddingHosts/1">Ведущие</a></li>
-                            <li class="nav-item"><a class="nav-link" href="weddingHosts/2">Фотографы</a></li>
-                            <li class="nav-item"><a class="nav-link" href="weddingHosts/3">Видеографы</a></li>
+                            <li class="nav-item"><a class="nav-link" href="error">Ведущие</a></li>
+                            <li class="nav-item"><a class="nav-link" href="error">Фотографы</a></li>
+                            <li class="nav-item"><a class="nav-link" href="error">Видеографы</a></li>
                         </ul>
                     </li>
                     <li class="nav-item"><a class="nav-link">Еда</a>
                         <ul class="submenu">
-                            <li class="nav-item"><a class="nav-link" href="weddingHosts/4">Рестораны</a></li>
-                            <li class="nav-item"><a class="nav-link" href="weddingHosts/10">Торты</a></li>
+                            <li class="nav-item"><a class="nav-link" href="error">Рестораны</a></li>
+                            <li class="nav-item"><a class="nav-link" href="error">Торты</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="weddingHosts/5">Декор и флористика</a></li>
+                    <li class="nav-item"><a class="nav-link" href="error">Декор и флористика</a></li>
                     <li class="nav-item"><a class="nav-link">Салоны</a>
                         <ul class="submenu">
-                            <li class="nav-item"><a class="nav-link" href="weddingHosts/6">Салон красоты</a></li>
-                            <li class="nav-item"><a class="nav-link" href="weddingHosts/7">Свадебный салон</a></li>
+                            <li class="nav-item"><a class="nav-link" href="error">Салон красоты</a></li>
+                            <li class="nav-item"><a class="nav-link" href="error">Свадебный салон</a></li>
                         </ul>
                     </li>
                     <li class="nav-item"><a class="nav-link">Музыка, танцы, шоу</a>
                         <ul class="submenu">
-                            <li class="nav-item"><a class="nav-link" href="weddingHosts/8">Шоу-программы</a></li>
-                            <li class="nav-item"><a class="nav-link" href="weddingHosts/11">Музыкальное сопровождение</a></li>
-                            <li class="nav-item"><a class="nav-link" href="weddingHosts/12">Постановка свадебного танца</a></li>
+                            <li class="nav-item"><a class="nav-link" href="error">Шоу-программы</a></li>
+                            <li class="nav-item"><a class="nav-link" href="error">Музыкальное сопровождение</a></li>
+                            <li class="nav-item"><a class="nav-link" href="error">Постановка свадебного танца</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="weddingHosts/9">Транспорт</a></li>
-                    <li class="nav-item"><a class="nav-link" href="weddingHosts/13">Отели</a></li>
+                    <li class="nav-item"><a class="nav-link" href="error">Транспорт</a></li>
+                    <li class="nav-item"><a class="nav-link" href="error">Отели</a></li>
                 </ul>
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">

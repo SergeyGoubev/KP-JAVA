@@ -11,80 +11,134 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <html>
 <head>
-    <title> Свадебное агентство </title>
+    <title> Агенство по проведению праздников</title>
+
+    <!-- Bootstrap core CSS -->
+    <!-- <link href="/resources/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+    <style>
+        <%@ include file="/resources/css/carousel.css" %>
+        table{
+            margin-left: 30px;
+        }
+    </style>
+
 </head>
 
-<body bgcolor="FFCCFF">
+<body>
 
-<table border="3">
-    <tr>
-        <td bgcolor="CC99FF" width="60"> <a href="../index">Выход</a></td>
-        <td bgcolor="CC99FF" width="150"> <a href="../${backRef}">Вернуться на главную страницу</a> </td>
-        <td bgcolor="CC99FF" width="150"> <a href="34.html">Написать сообщение</a></td>
-    </tr>
-</table>
-<br>
-<table border="2" width="70%" cellpadding="2">
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index">ПуА</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="organizatorIndex">Главная</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link">Люди<i class="fa fa-angle-down"></i></a>
+                        <ul class="submenu">
+                            <li class="nav-item"><a class="nav-link" href="weddingHosts/1">Ведущие</a></li>
+                            <li class="nav-item"><a class="nav-link" href="weddingHosts/2">Фотографы</a></li>
+                            <li class="nav-item"><a class="nav-link" href="weddingHosts/3">Видеографы</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link">Еда</a>
+                        <ul class="submenu">
+                            <li class="nav-item"><a class="nav-link" href="weddingHosts/4">Рестораны</a></li>
+                            <li class="nav-item"><a class="nav-link" href="weddingHosts/10">Торты</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="weddingHosts/5">Декор и флористика</a></li>
+                    <li class="nav-item"><a class="nav-link">Салоны</a>
+                        <ul class="submenu">
+                            <li class="nav-item"><a class="nav-link" href="weddingHosts/6">Салон красоты</a></li>
+                            <li class="nav-item"><a class="nav-link" href="weddingHosts/7">Свадебный салон</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link">Музыка, танцы, шоу</a>
+                        <ul class="submenu">
+                            <li class="nav-item"><a class="nav-link" href="weddingHosts/8">Шоу-программы</a></li>
+                            <li class="nav-item"><a class="nav-link" href="weddingHosts/11">Музыкальное сопровождение</a></li>
+                            <li class="nav-item"><a class="nav-link" href="weddingHosts/12">Постановка свадебного танца</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="weddingHosts/9">Транспорт</a></li>
+                    <li class="nav-item"><a class="nav-link" href="weddingHosts/13">Отели</a></li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                <form class="d-flex" action="index">
+                    <button class="btn btn-outline-success">Выход</button>
+                </form>
+                <form class="d-flex" action="${backRef}">
+                    <button class="btn btn-outline-success">Вернуться назад</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>
 
-    <tr>
-        <td>Ведущий: ${user.name} ${user.surname}</td>
-        <td>Рейтинг: ${user.rating}</td>
-    </tr>
-    <tr>
-        <td>${user.description}</td>
-        <td><img src="../getUserImage/${user.userId}" height="300" width="300"/></td>
-    </tr>
-    <tr>
-        <td>Телефон: ${user.telephone}</td>
-        <td>Email: ${user.email}</td>
-    </tr>
-    <tr>
-        <td>${user.organizationName}</td>
-        <td>${user.address}</td>
-    </tr>
-</table>
-<br>
-<table border="0" ${hidden}>
+<main>
+    <div class="container marketing" border="2">
+        <div class="row">
+            <div class="col-lg-4">
+                <svg class="bd-placeholder-img rounded-circle" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><img src="../getUserImage/${user.userId}" width="140" height="140"/></svg>
+
+                <h2>${user.name} ${user.surname}</h2>
+                <p>Рейтинг: ${user.rating}</p>
+                <p>Описание: ${user.description}</p>
+                <p>Возраст: ${user.age}</p>
+                <p>Телефон: ${user.telephone}</p>
+                <p>Email: ${user.email}</p>
+                <p>Организация: ${user.organizationName}</p>
+                <p>Адресс организации: ${user.address}</p>
+            </div><!-- /.col-lg-4 -->
+        </div>
+    </div>
+    <div border="0" ${hidden}>
     <form:form method="post" action="../comment/${user.userId}">
-        <tr>
-            <td>Комментарий:</td>
-            <td><form:input path="comment"/></td>
-        </tr>
-        <tr>
-            <td>Оценка (введите значение от 1 до 5):</td>
-            <td><form:input path="mark"/></td>
-        </tr>
-        <tr>
-            <td><input type="submit" value="Добавить" /></td>
-        </tr>
-    </form:form>
-</table>
+        <div class="form-floating">
+            <form:input path="comment" class="form-control" id="floatingInput" placeholder="Classno"/>
+            <label for="floatingInput">Комментарий</label>
+        </div>
 
-<table border="2" width="70%" cellpadding="2">
-    <c:choose>
+        <div class="form-floating">
+            <form:input type="number" path="mark" class="form-control" id="floatingPassword"
+                        placeholder="5"/>
+            <label for="floatingPassword">Оценка (введите значение от 1 до 5)</label>
+        </div>
+        <button class="btn btn-outline-success" type="submit" value="Добавить">Добавить</button>
+    </form:form>
+    </div>
+
+    <table border="2" width="50%" cellpadding="2">
+        <c:choose>
         <c:when test="${fn:length(list) gt 0}">
-            <c:forEach var="commentRating" items="${list}">
-                <tr>
-                    <td rowspan="2">${commentRating.mark}</td>
-                    <td>${commentRating.date} <a href="../userInf/${commentRating.userId}">${commentRating.name} ${commentRating.surname}</a></td>
-                </tr>
-                <tr>
-                    <td>${commentRating.comment}</td>
-                </tr>
-            </c:forEach>
+        <c:forEach var="commentRating" items="${list}">
+        <tr>
+            <td rowspan="2">${commentRating.mark}</td>
+            <td>${commentRating.date} <a href="../userInf/${commentRating.userId}">${commentRating.name} ${commentRating.surname}</a></td>
+        </tr>
+        <tr>
+            <td>${commentRating.comment}</td>
+        </tr>
+        </c:forEach>
         </c:when>
 
         <c:otherwise>
-            <tr>
-                <td align="center"><h3>Список пуст</h3></td>
-            </tr>
+        <tr>
+            <td align="center"><h3>Список пуст</h3></td>
+        </tr>
         </c:otherwise>
-    </c:choose>
-</table>
+        </c:choose>
+    </table>
+</main>
 </body>
 </html>
-
-
-
-
-
