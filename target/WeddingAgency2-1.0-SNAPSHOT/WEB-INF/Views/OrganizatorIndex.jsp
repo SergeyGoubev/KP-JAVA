@@ -81,7 +81,7 @@
                 <form class="d-flex" action="index">
                     <button class="btn btn-outline-success">Выход</button>
                 </form>
-                <form class="d-flex" action="myInf">
+                <form class="d-flex" action="myOrgInf">
                     <button class="btn btn-outline-success">${userJSP.name} ${userJSP.surname}</button>
                 </form>
             </div>

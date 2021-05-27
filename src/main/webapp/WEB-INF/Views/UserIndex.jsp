@@ -66,6 +66,13 @@
                     </li>
                     <li class="nav-item"><a class="nav-link" href="weddingHosts/9">Транспорт</a></li>
                     <li class="nav-item"><a class="nav-link" href="weddingHosts/13">Отели</a></li>
+                    <li class="nav-item"><a class="nav-link">Моё</a>
+                        <ul class="submenu">
+                            <li class="nav-item"><a class="nav-link" href="guests">Список гостей</a></li>
+                            <li class="nav-item"><a class="nav-link" href="error">Учёт расходов</a></li>
+                            <li class="nav-item"><a class="nav-link" href="error">Мои заказы</a></li>
+                        </ul>
+                    </li>
                 </ul>
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -82,7 +89,7 @@
     </nav>
 </header>
 
-
+<main>
 <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
         <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
